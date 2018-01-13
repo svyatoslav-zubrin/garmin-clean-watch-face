@@ -50,9 +50,11 @@ class ProgressIndicator extends Ui.Drawable {
 
 	// Update UI
 	private function updateComponent(dc) {
+		var lineHeight = 2;
+		var lineOriginX = 32;
+		var lineOriginY = infoType == Steps ? 120 : 117; // beneath date: 157, above time: 44, twins: 117
+
 		if (Sys.getDeviceSettings().activityTrackingOn == true) {
-			// Info
-			var y = infoType == Steps ? 120 : 117; // beneath date: 157, above time: 44, twins: 117
 			var activityInfo = ActivityMonitor.getInfo();
 			if (activityInfo != null) {
 				var fraction = 0;
@@ -62,13 +64,22 @@ class ProgressIndicator extends Ui.Drawable {
 					fraction = findMovementFraction(activityInfo);
 				}
 				dc.setColor(mColor, mColor);
-				dc.fillRectangle(32, y, fraction * 150, 2);
+				dc.fillRectangle(lineOriginX, 
+								 lineOriginY, 
+								 fraction * mMaxWidth, 
+								 lineHeight);
 				dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_DK_GRAY);
-				dc.fillRectangle(32 + fraction * 150, y, (1 - fraction) * 150, 2);
+				dc.fillRectangle(lineOriginX + fraction * mMaxWidth, 
+								 lineOriginY, 
+								 (1 - fraction) * mMaxWidth,
+								 lineHeight);
 			}
 		} else {
 			dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_DK_GRAY);
-			dc.fillRectangle(32, y, 150, 2);
+			dc.fillRectangle(lineOriginX, 
+							 lineOriginY, 
+							 mMaxWidth, 
+							 lineHeight);
 		}
 	}
 
