@@ -1,0 +1,30 @@
+<resources>
+    <bitmap id="id_bluetooth" filename="bluetooth.png" >
+	    	<palette disableTransparency="false">
+            <color>FFFFFF</color>
+            <color>EFEFEF</color>
+            <color>000000</color>
+        </palette>
+    </bitmap>
+   	<bitmap id="id_alarm" filename="alarm.png" >
+	    	<palette disableTransparency="false">
+            <color>FFFFFF</color>
+            <color>EFEFEF</color>
+            <color>000000</color>
+        </palette>
+    </bitmap>
+    <bitmap id="id_messages" filename="messages.png" >
+	    	<palette disableTransparency="false">
+            <color>FFFFFF</color>
+            <color>EFEFEF</color>
+            <color>000000</color>
+        </palette>
+    </bitmap>
+    <bitmap id="id_sleep" filename="sleep.png" >
+	    	<palette disableTransparency="false">
+            <color>FFFFFF</color>
+            <color>EFEFEF</color>
+            <color>000000</color>
+        </palette>
+    </bitmap>
+ </resources>

@@ -1,0 +1,16 @@
+<layout id="WatchFace">
+    <drawable class="Background" />
+    <label id="TimeLabel" x="center" y="50" font="Gfx.FONT_NUMBER_HOT" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
+    <label id="DateLabel" x="center" y="125" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
+    <label id="WarningLabel" x="center" y="19" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_RED" />
+    <label id="BatteryLabel" x="center" y="0" font="Gfx.FONT_MEDIUM" justification="Gfx.TEXT_JUSTIFY_CENTER" color="Gfx.COLOR_WHITE" />
+    <drawable id="progressIndicator" class="ProgressIndicator">
+    		<param name="maxWidth">150</param>
+    		<param name="infoType">0</param>
+    </drawable>
+    <drawable id="movementIndicator" class="ProgressIndicator">
+    		<param name="maxWidth">150</param>
+    		<param name="infoType">1</param>
+    </drawable>
+    
+</layout>
